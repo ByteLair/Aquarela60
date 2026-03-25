@@ -1,6 +1,7 @@
 services:
   app:
     build: .
+    image: ${APP_NAME:-aquarela60}:latest
     container_name: ${APP_NAME:-aquarela60}-app
     restart: unless-stopped
     environment:

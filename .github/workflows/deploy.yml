@@ -54,5 +54,5 @@ jobs:
       - name: Limpar imagens e build cache
         if: always()
         run: |
-          docker image prune -f
-          docker builder prune -f --filter "until=72h"
+          docker image prune -a -f --filter "until=24h"
+          docker builder prune -f --filter "until=24h"

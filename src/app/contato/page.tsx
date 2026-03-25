@@ -155,7 +155,7 @@ export default function ContatoPage() {
                 </div>
                 <div className="section-divider my-6" />
                 <p className="text-marrom-light">
-                  O campus fica próximo à estação de trem Rudge Ramos e conta com
+                  O campus fica próximo a igreja do Rudge Ramos e conta com
                   estacionamento. Ao chegar, dirija-se ao Prédio Sigma, sala 203.
                 </p>
               </div>

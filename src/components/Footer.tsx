@@ -32,7 +32,7 @@ export function Footer() {
           {/* Links */}
           <div>
             <h3 className="text-lg font-bold font-[family-name:var(--font-display)] mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">Navegação</span>
+              <span className="text-gradient-laranja">Navegação</span>
             </h3>
             <div className="space-y-3">
               {[
@@ -56,7 +56,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-bold font-[family-name:var(--font-display)] mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">Contato</span>
+              <span className="text-gradient-laranja">Contato</span>
             </h3>
             <div className="space-y-3 text-creme/70">
               <p>

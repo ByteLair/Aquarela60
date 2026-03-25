@@ -76,7 +76,7 @@ export default function SobrePage() {
               >
                 <span className="text-5xl block mb-4">{item.emoji}</span>
                 <h3 className="text-2xl font-bold font-[family-name:var(--font-display)] mb-4">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">{item.title}</span>
+                  <span className="text-gradient-laranja">{item.title}</span>
                 </h3>
                 <p className="text-creme/80 leading-relaxed">{item.text}</p>
               </div>

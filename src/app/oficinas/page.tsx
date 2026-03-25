@@ -115,7 +115,7 @@ export default function OficinasPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-[family-name:var(--font-display)] mb-3">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">Grade Completa</span>
+              <span className="text-gradient-laranja">Grade Completa</span>
             </h2>
             <p className="text-creme/60 italic text-sm">
               * Horários de exemplo — confirme com o NAC antes de se inscrever

@@ -60,6 +60,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+/* Gradient text — laranja to amarelo (bypasses h1-h6 color override) */
+.text-gradient-laranja {
+  background: linear-gradient(to right, var(--color-laranja), var(--color-amarelo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* Watercolor blob decorations */
 .watercolor-blob {
   position: absolute;

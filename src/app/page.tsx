@@ -261,7 +261,7 @@ export default function Home() {
               Quem vive, sabe
             </p>
             <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-display)] text-white">
-              Histórias que{" "}
+              <span className="text-amarelo-light">Histórias que</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">
                 inspiram
               </span>

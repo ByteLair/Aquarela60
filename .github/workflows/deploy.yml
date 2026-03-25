@@ -9,10 +9,13 @@ concurrency:
   group: deploy-production
   cancel-in-progress: false
 
+env:
+  APP_NAME: ${{ vars.APP_NAME || 'aquarela60' }}
+
 jobs:
   deploy:
     name: Build & Deploy
-    runs-on: self-hosted  # Runner no T110 II / servidor local
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -21,12 +24,12 @@ jobs:
       - name: Criar .env de produção
         run: |
           cat > .env << EOF
-          APP_NAME=${{ vars.APP_NAME }}
+          APP_NAME=${{ env.APP_NAME }}
           CLOUDFLARE_TUNNEL_TOKEN=${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}
           EOF
 
       - name: Build da imagem
-        run: docker build -t ${{ vars.APP_NAME }}:latest .
+        run: docker build -t ${{ env.APP_NAME }}:latest .
 
       - name: Parar containers antigos
         run: docker compose down --remove-orphans || true
@@ -38,7 +41,7 @@ jobs:
         run: |
           echo "Aguardando app iniciar..."
           for i in $(seq 1 12); do
-            if docker exec ${{ vars.APP_NAME }}-app wget -qO- http://localhost:3000/api/health > /dev/null 2>&1; then
+            if docker exec ${{ env.APP_NAME }}-app wget -qO- http://localhost:3000/api/health > /dev/null 2>&1; then
               echo "App saudável!"
               exit 0
             fi

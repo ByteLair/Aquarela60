@@ -25,7 +25,7 @@ export default function Home() {
               Programa de Extensão Universitária — Desde 2012
             </p>
             <h1 className="text-5xl md:text-7xl font-bold font-[family-name:var(--font-display)] text-white leading-tight mb-6 animate-fade-in-up opacity-0 animate-delay-100">
-              <span className="text-amarelo-light">Aquarela</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">Aquarela</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja via-amarelo to-verde">
                 60+
               </span>
@@ -261,7 +261,7 @@ export default function Home() {
               Quem vive, sabe
             </p>
             <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-display)] text-white">
-              <span className="text-amarelo-light">Histórias que</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">Histórias que</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-laranja to-amarelo">
                 inspiram
               </span>

@@ -1,18 +1,14 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: ${APP_NAME:-nextjs-app}
+    build: .
+    container_name: ${APP_NAME:-aquarela60}-app
     restart: unless-stopped
-    environment:
-      - NODE_ENV=production
     networks:
       - internal
 
   nginx:
     image: nginx:alpine
-    container_name: ${APP_NAME:-nextjs-app}-nginx
+    container_name: ${APP_NAME:-aquarela60}-nginx
     restart: unless-stopped
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -23,9 +19,11 @@ services:
 
   cloudflared:
     image: cloudflare/cloudflared:latest
-    container_name: ${APP_NAME:-nextjs-app}-tunnel
+    container_name: ${APP_NAME:-aquarela60}-tunnel
     restart: unless-stopped
-    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
     depends_on:
       - nginx
     networks:

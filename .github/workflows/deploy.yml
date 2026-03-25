@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "Aguardando app iniciar..."
           for i in $(seq 1 12); do
-            if docker exec ${{ vars.APP_NAME }} wget -qO- http://localhost:3000/api/health > /dev/null 2>&1; then
+            if docker exec ${{ vars.APP_NAME }}-app wget -qO- http://localhost:3000/api/health > /dev/null 2>&1; then
               echo "App saudável!"
               exit 0
             fi

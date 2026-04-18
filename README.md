@@ -6,6 +6,8 @@ Site institucional do Programa Aquarela 60+, iniciativa do Núcleo de Arte e Cul
 
 ## Stack
 
+**On-Premisse**
+
 | Camada | Tecnologia |
 |---|---|
 | App | Next.js 15 (standalone, React 19) |
@@ -28,4 +30,5 @@ Internet → Cloudflare → bytelair_entrance tunnel → NGINX Ingress (10.10.10
 
 | Nome | Descrição |
 |---|---|
-| `KUBECONFIG` | kubeconfig do cluster em base64 |
+| `KUBECONFIG` | kubeconfig do cluster em base64 | 
+
